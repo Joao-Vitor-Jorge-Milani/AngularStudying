@@ -1,0 +1,125 @@
+{
+  "660": [
+    {}
+  ],
+  "users": [
+    {
+      "email": "teste@teste.com.br",
+      "password": "$2a$10$asEgQPQd9ZafBy/xVEyZu.rH94nN8syw4cn31j/AxW.I8YTCL5632",
+      "name": "Usuario de teste",
+      "id": 1
+    }
+  ],
+  "sales": [
+    {
+      "address": {
+        "zipcode": "09521170",
+        "street": "Rua Miguel Almansa Garcia",
+        "number": 654,
+        "state": "SP",
+        "city": "São Caetano do Sul",
+        "neighbor": "Centro"
+      },
+      "payment": {
+        "name": "asdf",
+        "card": "6546546546546546",
+        "cv": "654",
+        "date": "6546"
+      },
+      "sales": [
+        {
+          "name": "jOSE COME PAO",
+          "price": "66.56",
+          "qnt": 49,
+          "id": 5,
+          "qntBuy": 6
+        }
+      ],
+      "id": 1
+    },
+    {
+      "address": {
+        "zipcode": "09521170",
+        "street": "Rua Miguel Almansa Garcia",
+        "number": 17,
+        "state": "SP",
+        "city": "São Caetano do Sul",
+        "neighbor": "Centro"
+      },
+      "payment": {
+        "name": "ASLDKFJAÇLSKJDFÇALSKJDFÇLKJ",
+        "card": "3213213213213213",
+        "cv": "588",
+        "date": "5154"
+      },
+      "sales": [
+        {
+          "name": "Sanduiche de presunto",
+          "price": "6.20",
+          "qnt": 50,
+          "id": 2,
+          "qntBuy": 2
+        }
+      ],
+      "id": 2
+    },
+    {
+      "address": {
+        "zipcode": "09521170",
+        "street": "Rua Miguel Almansa Garcia",
+        "number": 654,
+        "state": "SP",
+        "city": "São Caetano do Sul",
+        "neighbor": "Centro"
+      },
+      "payment": {
+        "name": "ASDFASDF",
+        "card": "6546546546546546",
+        "cv": "654",
+        "date": "6546"
+      },
+      "sales": [
+        {
+          "name": "Bola quadrada",
+          "price": 1.8,
+          "qnt": 5,
+          "id": 1,
+          "qntBuy": 5
+        }
+      ],
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "name": "Bola quadrada",
+      "price": 1.8,
+      "qnt": 0,
+      "id": 1
+    },
+    {
+      "name": "Sanduiche de presunto",
+      "price": "6.20",
+      "qnt": 48,
+      "id": 2
+    },
+    {
+      "name": "HQ Chapolin",
+      "price": 1.99,
+      "qnt": 0,
+      "id": 3
+    },
+    {
+      "name": "Biscoito",
+      "price": 3.4,
+      "qnt": 4,
+      "id": 4
+    },
+    {
+      "name": "Teste",
+      "price": 33.25,
+      "qnt": 48,
+      "id": 5
+    }
+  ]
+}
