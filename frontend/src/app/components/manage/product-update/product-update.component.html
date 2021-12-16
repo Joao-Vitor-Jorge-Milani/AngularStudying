@@ -1,0 +1,41 @@
+<mat-card >
+    <mat-card-title class="indigo-accent title">Editar 
+        <mat-icon class="icon">edit</mat-icon>
+    </mat-card-title>
+   
+    
+    <form [formGroup]="productUpdateFormGroup">
+            <mat-form-field>
+                <!-- <input matInput placeholder="Nome" [(ngModel)]="produto.name" name="name"> -->
+                <input matInput placeholder="Nome" formControlName="name" name="name">
+                <mat-error *ngIf="this.productUpdateFormGroup.controls['name'].errors">
+                    Por gentileza, inserir um nome válido
+               </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <!-- <input matInput placeholder="Preço (R$)" [(ngModel)]="produto.price" name="price"> -->
+                <input matInput placeholder="Preço (R$)" formControlName="price" name="price">
+                <mat-error *ngIf="this.productUpdateFormGroup.controls['price'].errors">
+                    Por gentileza, inserir um preço válido
+                </mat-error>  
+            </mat-form-field>
+            <mat-form-field>
+                <!-- <input matInput type="number" placeholder="Quantidade" [(ngModel)]="produto.qnt" name="qnt"> -->
+                <input matInput type="number" placeholder="Quantidade" formControlName="qnt" name="qnt">
+                <mat-error *ngIf="this.productUpdateFormGroup.controls['qnt'].errors">
+                    Por gentileza, inserir pelo menos 1 item
+                </mat-error> 
+            </mat-form-field>
+    </form>
+
+    <div class="buttons">
+        <button mat-raised-button color="primary" (click)="save()">
+            Salvar
+        </button>
+        
+        <button mat-raised-button class="cancel" (click)="cancel()" color="error">
+            Cancelar
+        </button>
+    </div>
+
+</mat-card>

@@ -1,0 +1,82 @@
+<div>
+  <mat-card class="container">
+    <mat-card-title class="title">Entrega</mat-card-title>
+    <form [formGroup]="checkoutFormGroup">
+      <div>
+        <form formGroupName="address">
+          <mat-form-field class="field">
+            <input matInput placeholder="CEP" formControlName="zipcode" mask="00000-000" (blur)="submitCepConsult()" />
+            <mat-error *ngIf="verifyErrors('address.zipcode')">
+              inserir um CEP válido
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="field">
+            <input matInput placeholder="Rua" formControlName="street" />
+            <mat-error *ngIf="verifyErrors('address.street')">
+              Inserir um logradouro válido
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="field">
+            <input matInput placeholder="Numero" formControlName="number" type="number"/>
+            <mat-error *ngIf="verifyErrors('address.number')">
+              Inserir um número válido
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="field">
+            <input matInput placeholder="Estado" formControlName="state" />
+            <mat-error *ngIf="verifyErrors('address.state')">
+              Inserir um Estado válido
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="field">
+            <input matInput placeholder="Cidade" formControlName="city" />
+            <mat-error *ngIf="verifyErrors('address.city')">
+              Inserir uma cidade válida
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="field">
+            <input matInput placeholder="Bairro" formControlName="neighbor" />
+            <mat-error *ngIf="verifyErrors('address.zipcode')">
+              Inserir um bairro válido
+            </mat-error>
+          </mat-form-field>
+        </form>
+        <mat-divider></mat-divider>
+      </div>
+      
+      <div>
+        <form formGroupName="payment">
+          <mat-card-title class="title">Dados para pagamento</mat-card-title>
+          <mat-form-field class="field">
+            <input matInput placeholder="Nome no cartão" formControlName="name" />
+            <mat-error *ngIf="verifyErrors('payment.name')">
+                Inserir um nome válido
+              </mat-error>
+          </mat-form-field>
+          <mat-form-field class="field">
+            <input matInput placeholder="Número cartão" formControlName="card" mask="0000.0000.0000.0000"/>
+            <mat-error *ngIf="verifyErrors('payment.card')">
+                Inserir um número de cartão válido
+              </mat-error>
+          </mat-form-field>
+          <mat-form-field class="field">
+            <input matInput placeholder="CVV" formControlName="cv" mask="000"/>
+            <mat-error *ngIf="verifyErrors('payment.cv')">
+                Inserir um CVV válido
+              </mat-error>
+          </mat-form-field>
+          <mat-form-field class="field">
+            <input matInput placeholder="Validade do cartão" formControlName="date" mask="00/00">
+            <mat-error *ngIf="verifyErrors('payment.date')">
+                Inserir uma data válida
+              </mat-error>
+          </mat-form-field>
+        </form>
+      </div>
+    </form>
+    <div class="container-2">
+        <button mat-raised-button color="primary" class="item" (click)="onSubmit()" >Finalizar pedido</button>
+    </div>
+    
+  </mat-card>
+</div>

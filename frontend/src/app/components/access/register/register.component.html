@@ -1,0 +1,26 @@
+<div class="flex-box" [formGroup]="createFormGroup">
+    <mat-form-field>
+        <input matInput placeholder="Nome" formControlName="name" name="nome" />
+        <mat-error *ngIf="this.createFormGroup.controls['name'].errors">
+          Por gentileza inserir um nome válido
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+
+        <input matInput placeholder="Email" formControlName="email" name="login" />
+        <mat-error *ngIf="this.createFormGroup.controls['email'].errors">
+          Por gentileza inserir um email
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+
+        <input matInput placeholder="Senha" formControlName="password" name="senha" />
+        <mat-error *ngIf="this.createFormGroup.controls['password'].errors">
+          Por gentileza inserir uma senha válida
+        </mat-error>
+    </mat-form-field>
+      
+    <button mat-raised-button color="secondary" (click)="onSubmit()">
+        Create
+    </button>
+  </div>

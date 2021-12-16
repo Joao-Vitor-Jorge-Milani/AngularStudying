@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: space-around;  
+  max-height: 80vh;
+} 
+
+.item {  
+  width: 50%;
+  max-width: 600px;
+  max-height: calc(100vh - 134px);
+  min-width: 300px; 
+}
+
+.item1 {
+  width: 300px;
+  height: 200px;
+  margin-left: 20px;   
+}
+
+.full-width-table {
+  width: 100%;  
+} 
+
+
+.changeQnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.qntBuy{
+  
+  width: auto;
+  font-weight: 500;
+  margin-left: 50%;
+  margin-right: 30%;
+}

@@ -1,0 +1,23 @@
+.title{
+    display: flex;
+    justify-content: left;
+    align-items: center;    
+    width: 300px;
+        
+}
+.title > .icon {
+    margin-left: 10px;
+}
+
+mat-card {
+    width: auto;
+    max-width: 250px;
+}
+
+.buttons{
+    display: flex;
+}
+
+.cancel {
+    margin-left: 20px;
+}

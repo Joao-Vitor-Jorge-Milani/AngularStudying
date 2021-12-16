@@ -1,0 +1,38 @@
+<mat-card>
+    <mat-card-title>Novo Produto</mat-card-title>
+    
+    <form [formGroup]="productCreateFormGroup">
+            <mat-form-field>                
+                <input matInput placeholder="Nome" formControlName="name" name="name">
+                <mat-error *ngIf="this.productCreateFormGroup.controls['name'].errors">
+                     Por gentileza, inserir um nome válido
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>                
+                <input matInput type="number" placeholder="Preço (R$)" formControlName="price" name="price">
+                <mat-error *ngIf="this.productCreateFormGroup.controls['price'].errors">
+                                    Por gentileza, inserir um preço válido
+                </mat-error>                                
+            </mat-form-field>
+            <mat-form-field>                    
+                    <input matInput type="number" ng-model="quantity" placeholder="Quantidade" formControlName="qnt" name="qnt">
+                    <mat-error *ngIf="this.productCreateFormGroup.controls['qnt'].errors">
+                                        Por gentileza, inserir pelo menos 1 item
+                    </mat-error>              
+            </mat-form-field>
+    </form>
+
+    <div class="buttons">
+        <button mat-raised-button color="primary" (click)="onSubmit()">
+            Cadastrar
+        </button>
+        
+        <button mat-raised-button (click)="cancel()" color="error">
+            Cancelar
+        </button>
+    </div>
+    
+</mat-card>
+
+
+

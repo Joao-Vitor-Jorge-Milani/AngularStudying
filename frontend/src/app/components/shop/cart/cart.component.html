@@ -1,0 +1,42 @@
+<div class="container" *ngIf="isEnable()">
+  <div class="teste mat-elevation-z8">
+    <mat-card>
+      <mat-card-title>
+        <!-- <mat-icon class="icon-display">shopping_cart</mat-icon> -->
+        <img class="icon-display" src="assets/img/shopping-cart.png" height="100">
+      </mat-card-title>
+
+      <mat-list *ngFor="let row of carts">
+        <!-- <mat-list> -->
+        <h3 matSubheader class="subHeader">{{ row.name }}</h3>
+        <mat-list-item>
+          <div class="container2">
+            <div>
+              <mat-icon style="color: green" matListIcon>check</mat-icon>
+            </div>
+            <div>
+              <h4 matLine>Preço: {{ buyPrice(row) | currency: 'BRL'}} </h4>
+              <p matLine>Quantidade: {{ row.qntBuy }}</p>
+            </div>
+            <div>
+                <mat-icon class="button" style="color: red" matListIcon (click)="remove(row)">
+                    remove_shopping_cart
+                </mat-icon>
+            </div>
+          </div>
+
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+
+      <div class="buttons">
+        <!-- <button mat-raised-button color="primary" (click)="onSubmit()"> -->
+        <button mat-raised-button color="primary" (click)="onSubmit()">Finalizar pedido</button>
+
+        <button mat-raised-button (click)="cleanCart()" color="error">
+          Limpar
+        </button>
+      </div>
+    </mat-card>
+  </div>
+</div>

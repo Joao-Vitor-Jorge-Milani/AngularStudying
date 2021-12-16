@@ -1,0 +1,60 @@
+
+<div class="container">
+  <div class="item">
+    <div class="mat-elevation-z8">
+      <table mat-table class="full-width-table" matSort aria-label="Elements">
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+          <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+        </ng-container>
+
+        <!-- price Column -->
+        <ng-container matColumnDef="price" class="column">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Preço</th>
+          <td mat-cell *matCellDef="let row">{{ row.price }}</td>          
+        </ng-container>
+
+        <ng-container matColumnDef="qntBuy">
+          <th mat-header-cell *matHeaderCellDef>Quantidade</th>
+          <td mat-cell *matCellDef="let row">
+            <div class="changeQnt">
+              <mat-icon class="indigo-accent teste clickable" (click)="plusQnt(row)"> add_circle_outline </mat-icon>
+              <!-- <input name="price" class="teste_item"> -->
+              <div class="qntBuy">
+                {{row.qntBuy}}
+              </div>
+              <mat-icon class="red changeQnt clickable" (click)="minusQnt(row)"> remove_circle_outline </mat-icon>
+            </div>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let row">
+            <div class="teste">
+              <mat-icon class="indigo-accent teste clickable" (click)="addShopping(row)">add_shopping_cart</mat-icon>
+            </div>
+          </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+
+      <mat-paginator
+        #paginator
+        [length]="dataSource?.data?.length"
+        [pageIndex]="0"
+        [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 20]"
+        aria-label="Select page"
+      >
+      </mat-paginator>
+    </div>
+  </div>
+  <div class="item1">
+    <app-cart></app-cart>
+  </div>
+</div>
